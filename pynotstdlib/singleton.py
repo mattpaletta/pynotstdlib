@@ -23,11 +23,9 @@ class Singleton(object):
         new instance of the decorated class and calls its `__init__` method.
         On all subsequent calls, the already created instance is returned.
         """
-        try:
-            return self._instance
-        except AttributeError:
+        if self._instance is None:
             self._instance = self._decorated(*args, **kwargs)
-            return self._instance
+        return self._instance
 
     def __call__(self):
         raise TypeError('Singletons must be accessed through `Instance()`.')
