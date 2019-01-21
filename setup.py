@@ -6,7 +6,7 @@ setup(
     url='https://github.com/mattpaletta/pynotstdlib',
     packages=find_packages(),
     include_package_data=True,
-    install_requires=[],
+    install_requires=["threadlru"],
     setup_requires=[],
     author="Matthew Paletta",
     author_email="mattpaletta@gmail.com",

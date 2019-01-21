@@ -1,1 +1,1 @@
-git+git://github.com/mattpaletta/pqdict.git
+git+git://github.com/mattpaletta/threadlru.git

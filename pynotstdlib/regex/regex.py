@@ -1,7 +1,7 @@
 import re
-from pqdict import PQDict
-regex_strings = PQDict(max_size = 20)
-regex_answers = PQDict(max_size = 30)
+from threadlru import LRUCache
+regex_strings = LRUCache(max_size = 20)
+regex_answers = LRUCache(max_size = 30)
 
 
 def match(string: str, using: str):
