@@ -30,6 +30,10 @@ def is_bool_strict(num):
     return num in [True, False]
 
 
+def bool_to_int(val: bool):
+    return 0 if not val else 1
+
+
 def safe_convert(val, to: type):
     def convert_type(type1: str, type2: str):
         if type2 is None or type2 == "":
