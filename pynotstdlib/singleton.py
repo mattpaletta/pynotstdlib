@@ -29,15 +29,12 @@ class Singleton(object):
         assert self._instance is not None, "Error, returning invalid class."
         return self._instance
 
-    def __new__(cls, *args, **kwargs):
+    def __call__(self):
         if self._instance is None:
             self._instance = self._decorated(*args, **kwargs)
 
         assert self._instance is not None, "Error, returning invalid class."
         return self._instance
-
-    def __call__(self):
-        raise TypeError('Singletons must be accessed through `Instance()`.')
-
+    
     def __instancecheck__(self, inst):
         return isinstance(inst, self._decorated)
