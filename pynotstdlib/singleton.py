@@ -35,6 +35,6 @@ class Singleton(object):
 
         assert self._instance is not None, "Error, returning invalid class."
         return self._instance
-    
+
     def __instancecheck__(self, inst):
         return isinstance(inst, self._decorated)
